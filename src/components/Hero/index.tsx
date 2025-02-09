@@ -1,3 +1,4 @@
+import MountainPng from '../../assets/moon-surface-hd.png'
 function Hero() {
   return (
     <>
@@ -15,6 +16,7 @@ function Hero() {
                 </div>
             </div>
         </div>
+        <img  className="absolute right-0 bottom-0 brightness-50 z-10" src={MountainPng} alt=""/>
       </div>
     </>
   );
