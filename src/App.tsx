@@ -2,8 +2,19 @@ import bgVideo from "./assets/earth-bg.mp4";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import ServicesSection from "./components/ServicesSection";
-
+import Banner from "./components/Banner";
+import Footer from "./components/Footer/indext";
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      easing: "ease-in-out",
+    })
+  })
+
   return (
     <>
       <div>
@@ -20,6 +31,9 @@ function App() {
           <Hero />
         </div>
         <ServicesSection />
+        <Banner variant="default"/>
+        <Banner variant="inverted"/>
+        <Footer />
       </div>
     </>
   );
