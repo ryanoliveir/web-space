@@ -34,10 +34,10 @@ function ServicesSection() {
       <div className="bg-black text-white relative z-50">
         <div className="container">
           <div className="min-h-[400px]">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10 ">
               {SevicesData.map((service) => {
                 return (
-                  <div className="min-h-[180px] flex flex-col justify-center items-center rounded-xl gap-2 bg-sky-900/60 backdrop-blur-sm  text-white text-center text-2xl py-8 px-3 w-full lg:w-[300px] mx-auto">
+                  <div data-aos="fade-up" data-aos-delay={service.aosDelay} className="min-h-[180px] flex flex-col justify-center items-center rounded-xl gap-2 bg-sky-900/60 backdrop-blur-sm  text-white text-center text-2xl py-8 px-3 w-full lg:w-[300px] mx-auto">
                     {service.icon}
                     <h1>{service.title}</h1>
                     <p>{service.content}</p>
@@ -46,7 +46,7 @@ function ServicesSection() {
                 );
               })}
             </div>
-            <img  className="h-[200px] w-full object-cover mix-blend-screen -translate-y-24 relative z-[0]" src={wave} alt="wave image" />
+            <img  className="h-[200px] w-full  object-cover mix-blend-screen -translate-y-24 relative z-[0]" src={wave} alt="wave image" />
           </div>
         </div>
       </div>
